@@ -17,12 +17,23 @@ class MainActivity: ComponentActivity(){
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            Text("Hello world today here !!!!")
+          //  Text("Hello world today here !!!!")
+//            Messenger("Welcome to my world")
+            PreviewMessenger()
         }
     }
 }
 
+@Preview
+@Composable
+fun PreviewMessenger() {
+    Messenger(info = "what did you eat.")
+}
 
+@Composable
+fun Messenger(info: String) {
+    Text(text = "Your info is: $info")
+}
 
 
 //class MainActivity : ComponentActivity() {
